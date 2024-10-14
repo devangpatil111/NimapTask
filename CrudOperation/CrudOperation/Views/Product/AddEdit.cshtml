@@ -1,0 +1,38 @@
+﻿@model Demo
+@section Scripts {
+
+    <script src="~/js/Validation.js"></script>
+    <script>
+        $(document).ready(function () {
+            GetCategory(@Model.CategoryId);
+
+        });
+    </script>
+}
+<div>
+    <div>
+        <h2>Add Product</h2>
+    </div>
+    <hr style="border: 1px solid black; margin: 20px 0;">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Category</label>
+            <span class="starField">*</span><br />
+            <select id="selectCategory" class="form-control">
+                <option value="0">--Select--</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label>Product Name</label>
+            <span class="starField">*</span><br />
+            <input type="type" id="name" class="form-control" placeholder="Product" name="name" value="@Model.Name" />
+            <input id="id" type="hidden" value="@Model.ID"/>
+        </div> 
+        <br />
+        <br />
+        <br />
+        <div><button type="submit" id="" class="btn btn-primary" onclick="validation('saveUser')">Save</button></div>
+        <br />
+        <br />
+    </div>
+</div>

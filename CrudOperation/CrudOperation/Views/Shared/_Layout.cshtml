@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CrudOperation.styles.css" asp-append-version="true" />
+    <style>
+        /* Side navigation bar */
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: white;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+            .sidenav a, h1 {
+                padding: 15px 10px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block;
+                text-align: center
+            }
+
+                .sidenav a:hover {
+                    background-color: #575757;
+                }
+
+        /* Main content */
+        .main-content {
+            margin-left: 260px;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidenav">
+        <i> <strong> <h1>Project</h1></strong></i>
+        <a href="/Category/index">Categoty</a>
+        <a href="/Product/index">Product</a>  
+        <a href="/Product/ProductList">Product List</a>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

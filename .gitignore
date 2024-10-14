@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CrudOperation/CrudOperation/bin/Debug/net8.0
+/CrudOperation/CrudOperation/obj
+/CrudOperation/.vs

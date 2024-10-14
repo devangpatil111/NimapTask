@@ -1,0 +1,23 @@
+﻿@model List<Demo>
+@section Scripts {
+
+    <script src="~/js/Validation.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h3>Product</h3>
+
+    </div>
+        <hr style="border: 1px solid black; margin: 20px 0;">
+
+    <div class="col-md-12">
+        <a class="btn btn-primary" style="text-align:right ; margin-left :82%" href="/Product/AddEdit"  type="submit" id="">Add Product</a>
+    </div>
+</div>
+<br />
+<div>
+
+    @Html.Partial("ListPartial.cshtml", Model)
+
+</div>
